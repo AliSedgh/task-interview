@@ -112,7 +112,7 @@ const UserForm: React.FC<IProps> = ({ type, userId }) => {
                 <Select
                   label="Status"
                   options={[
-                    { label: "select Status", value: "unknown" },
+                    { label: "select Status", value: null },
                     { label: "Active", value: "active" },
                     { label: "not-active", value: "not_active" },
                   ]}

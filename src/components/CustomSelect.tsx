@@ -5,7 +5,7 @@ interface TSelectProps extends React.ComponentPropsWithoutRef<"select"> {
   label: string;
   isRequired?: boolean;
   options: {
-    value: string;
+    value: string | null;
     label: string;
   }[];
 }
@@ -25,7 +25,7 @@ const CustomSelect = React.forwardRef<Ref, TSelectProps>((props, ref) => {
   return (
     <Select {...rest}>
       {options.map((option) => (
-        <option key={option.value} value={option.value}>
+        <option key={option.value} value={option.value || undefined}>
           {option.label}
         </option>
       ))}
