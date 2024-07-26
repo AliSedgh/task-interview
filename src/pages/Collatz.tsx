@@ -1,4 +1,3 @@
-import React from "react";
 import TitlePage from "../components/TitlePage";
 import { Container, FormContainer } from "../components/FormContainer";
 import CollatzForm from "../components/CollatzForm";

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import usePaginateUser from "../hooks/usePaginateUser";
 import { useSearchParams } from "react-router-dom";
 import useUpdateSearchParams from "../hooks/useUpdateSearchParams";

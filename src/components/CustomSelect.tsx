@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import React, { useId } from "react";
+import React from "react";
 
 interface TSelectProps extends React.ComponentPropsWithoutRef<"select"> {
   label: string;

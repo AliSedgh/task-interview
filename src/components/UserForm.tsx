@@ -1,7 +1,7 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
 import { userSchema } from "../validator";
-import { AnyObjectSchema, InferType } from "yup";
+import { InferType } from "yup";
 import ControllerInput from "./ControllerInput";
 import styled from "@emotion/styled";
 import Select from "./CustomSelect";
