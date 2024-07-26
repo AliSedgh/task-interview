@@ -4,8 +4,8 @@ const Header = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 48px;
   gap: 0.5rem;
 `;

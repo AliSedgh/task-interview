@@ -68,7 +68,7 @@ const Title = styled.div`
 const Container = styled.div`
   border: 1px solid #e6e6e6;
   border-radius: 10px;
-  min-height: 380px;
+  min-height: 400px;
 `;
 
 const AddButton = styled(Link)`
