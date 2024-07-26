@@ -25,9 +25,25 @@ const PaginationButton = styled.button<{ isDisable?: boolean }>`
 
 const ButtonContainer = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 7px;
   margin-top: 20px;
+  align-items: center;
 `;
+
+const CounterContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: var(--primary);
+  color: white;
+  font-size: 12px;
+`;
+
+const Counter = styled.span``;
+
 const Pagination = () => {
   const { totalPages, page } = usePaginateUser();
   const [searchParams] = useSearchParams();
@@ -49,6 +65,14 @@ const Pagination = () => {
         >
           previous
         </PaginationButton>
+        <CounterContainer>
+          <Counter>{page}</Counter>
+        </CounterContainer>
+        <Counter>of</Counter>
+        <CounterContainer>
+          <Counter>{totalPages}</Counter>
+        </CounterContainer>
+
         <PaginationButton
           isDisable={page === totalPages}
           onClick={() => {
