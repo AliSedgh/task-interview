@@ -23,7 +23,7 @@ const users: UserEntity[] = [
     userName: "john9978",
     email: "john@hotmail.com",
     phone: "7654321098",
-    status: "unknown",
+    status: undefined,
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const users: UserEntity[] = [
     userName: "sophia1287",
     email: "sophia@yahoo.com",
     phone: "4321098765",
-    status: "unknown",
+    status: undefined,
   },
   {
     id: 7,
@@ -71,7 +71,7 @@ const users: UserEntity[] = [
     userName: "daniel6745",
     email: "daniel@outlook.com",
     phone: "1098765432",
-    status: "unknown",
+    status: undefined,
   },
   {
     id: 10,

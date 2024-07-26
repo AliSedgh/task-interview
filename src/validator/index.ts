@@ -22,7 +22,8 @@ const userSchema = yup.object().shape({
     .required("Phone is required"),
   status: yup
     .string()
-    .oneOf(["active", "not_active", "unknown"], "Invalid status value"),
+    .oneOf(["active", "not_active"], "Invalid status value")
+    .notRequired(),
 });
 
 export { userSchema };

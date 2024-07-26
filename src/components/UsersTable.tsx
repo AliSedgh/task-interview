@@ -16,8 +16,9 @@ const Td = styled.td<{ status?: string | null }>`
   padding-left: 24px;
   &:last-child span {
     ${({ status }) =>
-      status &&
-      detectStyleBaseStatus[status as keyof typeof detectStyleBaseStatus]};
+      status
+        ? detectStyleBaseStatus[status as keyof typeof detectStyleBaseStatus]
+        : detectStyleBaseStatus["unknown"]};
     display: inline-block;
     padding: 4px 8px 4px 8px;
     font-size: 12px;
@@ -88,6 +89,7 @@ const Span = styled.span``;
 
 const UsersTable = () => {
   const { currentUsers: users } = usePaginateUser();
+
   const navigate = useNavigate();
 
   return (
@@ -123,11 +125,9 @@ const UsersTable = () => {
               <Td>{user.phone}</Td>
               <Td status={user.status}>
                 <span>
-                  {
-                    detectTextBaseStatus[
-                      user.status as keyof typeof detectTextBaseStatus
-                    ]
-                  }
+                  {detectTextBaseStatus[
+                    user.status as keyof typeof detectTextBaseStatus
+                  ] || detectTextBaseStatus["unknown"]}
                 </span>
               </Td>
             </Tr>

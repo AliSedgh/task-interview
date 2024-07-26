@@ -1,10 +1,12 @@
+import { Maybe } from "yup";
+
 type UserEntity = {
   id: number;
   name: string;
   userName: string;
   email: string;
   phone: string;
-  status?: string;
+  status?: Maybe<"active" | "not_active">;
 };
 
 type User = {

@@ -22,7 +22,7 @@ const UserForm: React.FC<IProps> = ({ type, userId }) => {
 
   const InitialValue =
     type === "create"
-      ? { name: "", userName: "", email: "", phone: "", status: "unknown" }
+      ? { name: "", userName: "", email: "", phone: "", status: null }
       : selectedUser;
 
   type TUserSchema = InferType<typeof userSchema>;
@@ -116,7 +116,9 @@ const UserForm: React.FC<IProps> = ({ type, userId }) => {
                     { label: "Active", value: "active" },
                     { label: "not-active", value: "not_active" },
                   ]}
-                  {...field}
+                  name={field.name}
+                  value={field.value || undefined}
+                  onChange={field.onChange}
                 />
               )}
             />
